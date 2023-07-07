@@ -1,0 +1,7 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+  duplicate_articles:
+    class: SevenGroupFrance\SuluDuplicateArticlesBundle\Admin\AppAdmin
+    tags: [{ name: "sulu.admin", alias: "app_admin" }]
