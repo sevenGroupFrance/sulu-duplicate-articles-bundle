@@ -1,3 +1,0 @@
-sulu_duplicate_articles.duplicate_content:
-    path: /admin/api/duplicate-content
-    controller: SevenGroupFrance\SuluDuplicateArticlesBundle\Controller\Admin\ContentController::duplicateContent
