@@ -10,7 +10,7 @@ use Sulu\Bundle\AdminBundle\Admin\View\ToolbarAction;
 use Sulu\Bundle\AdminBundle\Admin\View\ViewCollection;
 use Sulu\Bundle\ArticleBundle\Admin\ArticleAdmin;
 
-class AppAdmin extends Admin
+class DuplicateContentAdmin extends Admin
 {
     public function configureViews(ViewCollection $viewCollection): void
     {

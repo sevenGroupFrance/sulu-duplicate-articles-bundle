@@ -3,7 +3,7 @@ services:
     autowire: true
     autoconfigure: true
   duplicate_articles:
-    class: SevenGroupFrance\SuluDuplicateArticlesBundle\Admin\AppAdmin
+    class: SevenGroupFrance\SuluDuplicateArticlesBundle\Admin\DuplicateContentAdmin
     tags: [{ name: "sulu.admin", alias: "app_admin" }]
 
   SevenGroupFrance\SuluDuplicateArticlesBundle\Controller\Admin\ContentController:
