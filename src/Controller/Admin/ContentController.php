@@ -9,14 +9,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Sulu\Component\DocumentManager\DocumentManagerInterface;
 use Ramsey\Uuid\Uuid;
+use Symfony\Component\Security\Core\Security;
+use DateTime;
+
 
 class ContentController extends AbstractController
 {
     private $documentManager;
 
-    public function __construct(DocumentManagerInterface $documentManager) 
+    public function __construct(DocumentManagerInterface $documentManager, Security $security) 
     {
         $this->documentManager = $documentManager;
+        $this->security = $security;
+
     }
 
     // Duplique le contenu
@@ -41,8 +46,12 @@ class ContentController extends AbstractController
         $newUuid = Uuid::uuid4()->toString();
         $duplicatedContent->setUuid($newUuid);
 
-        // Modifie le titre du contenu dupliqué
+        // Modifie le titre du contenu dupliqué ainsi que le creator, l'author et la date de création.
         $duplicatedContent->setTitle("Copie " . $duplicatedContent->getTitle());
+        $user = $this->security->getUser();
+        $duplicatedContent->setCreator($user->getId());
+        $duplicatedContent->setAuthor($user->getId());
+        $duplicatedContent->setCreated(new Datetime());
 
         // Persiste le contenu dupliqué
         $this->documentManager->persist($duplicatedContent, "fr");
