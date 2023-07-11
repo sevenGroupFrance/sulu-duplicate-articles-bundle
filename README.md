@@ -6,11 +6,11 @@ Inspired by [this pull request](https://github.com/sulu/sulu-demo/pull/66).
 Importing a custom fonctionality into [sulu](https://github.com/sulu/sulu), in this example, a custom content type.\
 This bundle will import a custom toggle from the [react-switch](https://www.npmjs.com/package/react-switch) npm package.
 
-![How the custom toggle looks in sulu's admin](assets/images/ctb_clone.png)
+![How the custom toggle looks in sulu's admin](assets/ctb_clone.png)
 
 ## Installation
 1. Go to your `assets/admin` folder and install the react-switch npm package `npm install react-switch`.
-2. Download the [package](https://packagist.org/packages/sevengroupfrance/sulu-duolicate-articles-bundle) in your project with the following command line:\
+2. Download the [package](https://packagist.org/packages/sevengroupfrance/sulu-duplicate-articles-bundle) in your project with the following command line:\
 `composer require sevengroupfrance/sulu-duplicate-articles-bundle`.
 3. In `config/bundles.php` add the following code:\
 `SevenGroupFrance\SuluDuplicateArticlesBundle\DuplicateArticleBundle::class => ['all' => true]`.
@@ -30,9 +30,9 @@ For further customisation, please refer to the [official page](https://www.npmjs
 
 ## Use in your tAdmin view
 Once installed, you can check a any content on the list view page ( only one ) and click the button to start the cloning process
-![Cloning process after click](assets/images/ctb_cloning_process.png)
+![Cloning process after click](assets/ctb_cloning_process.png)
 
 The page will then reload and your new content will be available as an unpublished draft named copie " my_content_title"
-![Final result](assets/images/ctb_final.png)
+![Final result](assets/ctb_final.png)
 
 Be careful you can for now clone only one type of content at the time and only in the same content list. It may evolve in a later date.
