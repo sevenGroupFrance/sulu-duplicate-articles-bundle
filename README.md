@@ -13,9 +13,9 @@ This bundle will import a custom toggle from the [react-switch](https://www.npmj
 2. Download the [package](https://packagist.org/packages/sevengroupfrance/sulu-duplicate-articles-bundle) in your project with the following command line:\
 `composer require sevengroupfrance/sulu-duplicate-articles-bundle`.
 3. In `config/bundles.php` add the following code:\
-`SevenGroupFrance\SuluDuplicateArticlesBundle\DuplicateArticleBundle::class => ['all' => true]`.
+`SevenGroupFrance\SuluDuplicateArticlesBundle\DuplicateArticlesBundle::class => ['all' => true]`.
 4. In `assets/admin/package.json`, add the following line in the "dependencies" object:\
-`"sulu-duplicate-article-bundle": "file:node_modules/@sulu/vendor/sevengroupfrance/sulu-duplicate-articles-bundle/src/Resources/js"`.
+`"sulu-duplicate-articles-bundle": "file:node_modules/@sulu/vendor/sevengroupfrance/sulu-duplicate-articles-bundle/src/Resources/js"`.
 5. In `assets/admin`, `npm install` to initialize the bundle's symlink directory.
 6. In `assets/admin/index.js`, add this line:\
 `import 'sulu-duplicate-articles-bundle'`.
@@ -24,8 +24,8 @@ This bundle will import a custom toggle from the [react-switch](https://www.npmj
 9. In your config/routes/sulu_admin.yaml, add the routing logic that'll target your bundle's logic : 
 'duplicate_content:
     path: /admin/api/duplicate-content
-    controller: App\Controller\Admin\ContentController::duplicateContent'
-
+    controller: SevenGroupFrance\SuluDuplicateArticlesBundle\Controller\Admin\ContentController::duplicateContent
+   
 For further customisation, please refer to the [official page](https://www.npmjs.com/package/react-switch)
 
 ## Use in your tAdmin view
