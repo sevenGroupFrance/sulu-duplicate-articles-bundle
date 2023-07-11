@@ -13,7 +13,7 @@ This bundle will import a custom toggle from the [react-switch](https://www.npmj
 2. Download the [package](https://packagist.org/packages/sevengroupfrance/sulu-duplicate-articles-bundle) in your project with the following command line:\
 `composer require sevengroupfrance/sulu-duplicate-articles-bundle`.
 3. In `config/bundles.php` add the following code:\
-`SevenGroupFrance\SuluDuplicateArticlesBundle\DuplicateArticleBundle::class => ['all' => true]`.
+`SevenGroupFrance\SuluDuplicateArticlesBundle\DuplicateArticlesBundle::class => ['all' => true]`.
 4. In `assets/admin/package.json`, add the following line in the "dependencies" object:\
 `"sulu-duplicate-article-bundle": "file:node_modules/@sulu/vendor/sevengroupfrance/sulu-duplicate-articles-bundle/src/Resources/js"`.
 5. In `assets/admin`, `npm install` to initialize the bundle's symlink directory.
