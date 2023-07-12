@@ -49,7 +49,7 @@ class ContentController extends AbstractController
         // Modifie le titre du contenu dupliqué ainsi que le creator, l'author et la date de création.
         $duplicatedContent->setTitle("Copie " . $duplicatedContent->getTitle());
         $user = $this->security->getUser();
-        $duplicatedContent->setCreator($user->getContact()->getId());
+        $duplicatedContent->setCreator($user->getId());
         $duplicatedContent->setAuthor($user->getContact()->getId());
         $duplicatedContent->setCreated(new Datetime());
 
