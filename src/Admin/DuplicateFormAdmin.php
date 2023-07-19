@@ -14,14 +14,6 @@ class DuplicateFormAdmin extends Admin
 {
     public function configureViews(ViewCollection $viewCollection): void
     {
-        $logFilePath = '../public/view_names.log';
-
-        $logContent = '';
-        foreach ($viewCollection->all() as $name => $view) {
-            $logContent .= $name . "\n";
-        }
-    
-        file_put_contents($logFilePath, $logContent);
         if ($viewCollection->has('sulu_form.list')) {
             /** @var ListViewBuilderInterface $contentListViewBuilder */
             $contentListViewBuilder = $viewCollection->get('sulu_form.list');

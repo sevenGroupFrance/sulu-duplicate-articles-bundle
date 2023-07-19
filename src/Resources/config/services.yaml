@@ -11,3 +11,6 @@ services:
 
   SevenGroupFrance\SuluDuplicateArticlesBundle\Controller\Admin\ContentController:
     autowire: true
+
+  SevenGroupFrance\SuluDuplicateArticlesBundle\Controller\Admin\FormController:
+    autowire: true
