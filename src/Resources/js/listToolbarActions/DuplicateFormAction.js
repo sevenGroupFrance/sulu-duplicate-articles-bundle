@@ -8,7 +8,7 @@ export default class DuplicateFormAction extends AbstractListToolbarAction {
 
         return {
             type: 'button',
-            label: translate('Dupliquer'), // Étiquette du bouton de duplication
+            label: translate('Dupliquer le formulaire'), // Étiquette du bouton de duplication
             disabled: disableForEmptySelection && this.listStore.selections.length === 0, // Désactive le bouton si aucune sélection n'est faite
             onClick: this.handleClick, // Appelle la fonction handleClick lors du clic sur le bouton
             icon: 'su-copy', // Icône du bouton de duplication
