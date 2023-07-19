@@ -1,3 +1,7 @@
 sulu_duplicate_articles.duplicate_content:
     path: /admin/api/duplicate-content
     controller: SevenGroupFrance\SuluDuplicateArticlesBundle\Controller\Admin\ContentController::duplicateContent
+
+sulu_duplicate_forms.duplicate_form: 
+    path: /admin/api/duplicate-form
+    controller: SevenGroupFrance\SuluDuplicateArticlesBundle\Controller\Admin\FormController::duplicateForm
