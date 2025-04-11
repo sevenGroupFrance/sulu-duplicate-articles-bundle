@@ -19,9 +19,9 @@ class DuplicateFormAdmin extends Admin
             $contentListViewBuilder = $viewCollection->get('sulu_form.list');
 
             // Ajoute l'action de la barre d'outils pour la duplication
-            $contentListViewBuilder->addToolbarActions([
+            /* $contentListViewBuilder->addToolbarActions([
                 new ToolbarAction('Dupliquer le formulaire', ['disable_for_empty_selection' => true]),
-            ]);
+            ]); */
         }
     }
 
